@@ -1,3 +1,14 @@
 /*
 Theme name: My Theme
+Theme URI: https://my-theme.com
+Author: kauã de sousa 
+Author URI: https://github.com/ksmkyo
+Description: Tema para wordpress criando apenas para estudo 
+text Domain: my-theme
+Tags: responsive, two-column, full-width
+Doamin: /languages
 */
+
+body{
+    background: green;
+}
