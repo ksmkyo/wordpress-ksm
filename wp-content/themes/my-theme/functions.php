@@ -1,6 +1,6 @@
 <?php
 
-// require_once(get_template_directory() . '/inc/class-nav-bootstrap-walker.php');
+require_once(get_template_directory() . '/inc/class-nav-bootstrap-walker.php'); 
 
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup() {
@@ -39,4 +39,35 @@ function my_theme_sidebars() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'
     ));
+
+    register_sidebar(array(
+        'id' => 'footer-1',
+        'name' => 'Footer Left',
+        'description' => 'Widget that appears on the left of the footer',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
+        'id' => 'footer-2',
+        'name' => 'Footer Center',
+        'description' => 'Widget that appears on the center of the footer',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
+        'id' => 'footer-3',
+        'name' => 'Footer Right',
+        'description' => 'Widget that appears on the right of the footer',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ));
+
 }
