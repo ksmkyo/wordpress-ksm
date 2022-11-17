@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php get_header(); ?>
 
-    <?php wp_head(); ?>
-</head>
-<body>
-    
-    <h1><?php bloginfo('name'); ?></h1>
-    <h2><?php bloginfo('description'); ?></h2>
 
             <?php  
             if(have_posts() ) :
@@ -31,8 +21,4 @@
             <?php
         endif;
         ?>
-
-
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); 
