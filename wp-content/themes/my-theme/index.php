@@ -1,3 +1,4 @@
+<!-- Onde ficará os posts: http://localhost/wordpress-teste/ -->
 <?php get_header(); ?>
 
     <div class="container"> 
@@ -7,18 +8,13 @@
             <div class="col-sm-12">
 
                 <?php  
+
                 if(have_posts() ) :
                     while( have_posts() ) :
                         the_post();
-                ?>
 
-                <h3><?php the_title(); ?></h3>
+                    get_template_part('partials/post', 'default'); 
 
-                <div>
-                    <?php the_content(); ?>
-                </div>
-
-                <?php
                 endwhile;
             else:
                 ?>
